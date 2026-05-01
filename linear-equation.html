@@ -84,7 +84,6 @@
 
 <div class="score-bar">
   <div class="score-pill">Score: <span id="scoreDisplay">0</span> / <span id="totalDisplay">0</span></div>
-  <div class="score-pill">Streak 🔥 <span id="streakDisplay">0</span></div>
 </div>
 
 <div class="final-banner" id="finalBanner"></div>
@@ -501,15 +500,14 @@
 
 <script>
   // ── Score ─────────────────────────────────────────────
-  let score = 0, total = 0, streak = 0;
+  let score = 0, total = 0;
   const TOTAL_Q = 15;
 
   function updateScore(correct) {
     total++;
-    if (correct) { score++; streak++; } else { streak = 0; }
+    if (correct) { score++; }
     document.getElementById('scoreDisplay').textContent = score;
     document.getElementById('totalDisplay').textContent = total;
-    document.getElementById('streakDisplay').textContent = streak;
     if (total >= TOTAL_Q) {
       const pct   = Math.round((score / TOTAL_Q) * 100);
       const emoji = pct >= 90 ? '🌟' : pct >= 70 ? '🎉' : '💪';
