@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -381,13 +382,18 @@ header{
 
 <div class="hero">
   <div class="hero-tag">Chapter 1</div>
-  <h1>Adding &amp; Subtracting<br><span>Rational Numbers</span></h1>
-  <p>Master the number line, absolute value, and additive inverses — one concept at a time.</p>
+  <h1>Chapter 1 · <span>Rational Numbers</span></h1>
+  <p>Seven lessons covering absolute value, integer operations, fractions, decimals, and percent conversions.</p>
 </div>
 
 <div class="tabs">
   <button class="tab-btn active" id="tab-l1" onclick="switchTab('l1')">Lesson 1.1 · Absolute Value</button>
   <button class="tab-btn" id="tab-l2" onclick="switchTab('l2')">Lesson 1.2 · Additive Inverse</button>
+  <button class="tab-btn" id="tab-l3" onclick="switchTab('l3')">Lesson 1.3 · Add/Sub Rationals</button>
+  <button class="tab-btn" id="tab-l4" onclick="switchTab('l4')">Lesson 1.4 · Adding Pos &amp; Neg</button>
+  <button class="tab-btn" id="tab-l5" onclick="switchTab('l5')">Lesson 1.5 · Subtracting Pos &amp; Neg</button>
+  <button class="tab-btn" id="tab-l6" onclick="switchTab('l6')">Lesson 1.6 · Math Properties</button>
+  <button class="tab-btn" id="tab-l7" onclick="switchTab('l7')">Lesson 1.7 · Real World</button>
 </div>
 
 <div class="content">
@@ -651,9 +657,525 @@ header{
   </div>
 
   <div class="celebration" id="cel-l2">
+    <div style="font-size:2.5rem">🎉</div>
+    <h3>Lesson 1.2 Done!</h3>
+    <p style="margin-top:6px">Additive Inverses — nailed it. Ready for integers?</p>
+    <button class="check-btn" style="margin-top:18px" onclick="switchTab('l3')">Next: Add/Sub Rational Numbers →</button>
+  </div>
+</div>
+
+<!-- ═══ LESSON 1.3 ═══ -->
+<div class="tab-panel" id="panel-l3">
+  <div class="concept-box">
+    <div class="concept-label">Lesson 1.3 · Concept</div>
+    <h2>Adding &amp; Subtracting Rational Numbers</h2>
+    <p>Two key rules:</p>
+    <p>① <strong>Fractions</strong> — find the <span class="highlight">LCD</span>, convert both fractions, then add/subtract numerators.<br>
+    ② <strong>Decimals</strong> — <span class="highlight">align the decimal points</span> so place values line up, then add/subtract normally.</p>
+    <div class="nl-wrap">
+      <svg id="nl3" width="480" height="110" viewBox="0 0 480 110" xmlns="http://www.w3.org/2000/svg">
+        <!-- Fractions box -->
+        <rect class="nl-label" x="8" y="6" width="224" height="98" rx="10" fill="rgba(0,201,177,.08)" stroke="#00c9b1" stroke-width="1.5" opacity="0" style="transition-delay:.3s"/>
+        <text class="nl-label" x="120" y="28" font-family="Space Grotesk,sans-serif" font-size="11" fill="#00c9b1" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.38s">FRACTIONS — USE LCD</text>
+        <text class="nl-label" x="120" y="55" font-family="Nunito,sans-serif" font-size="13" fill="#ccd6f6" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.48s">4⅗ + 3¹/₁₀</text>
+        <text class="nl-label" x="120" y="74" font-family="Nunito,sans-serif" font-size="13" fill="#ccd6f6" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.55s">= 4⁶/₁₀ + 3¹/₁₀</text>
+        <text class="nl-label" x="120" y="95" font-family="Nunito,sans-serif" font-size="15" fill="#ffd200" text-anchor="middle" font-weight="900" opacity="0" style="transition-delay:.63s">= 7⁷/₁₀ ✓</text>
+        <!-- Decimals box -->
+        <rect class="nl-label" x="248" y="6" width="224" height="98" rx="10" fill="rgba(155,89,245,.08)" stroke="#9b59f5" stroke-width="1.5" opacity="0" style="transition-delay:.7s"/>
+        <text class="nl-label" x="360" y="28" font-family="Space Grotesk,sans-serif" font-size="11" fill="#9b59f5" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.78s">DECIMALS — ALIGN POINTS</text>
+        <text class="nl-label" x="400" y="55" font-family="Nunito,sans-serif" font-size="14" fill="#ccd6f6" text-anchor="end" font-weight="700" opacity="0" style="transition-delay:.86s">2.30</text>
+        <text class="nl-label" x="400" y="74" font-family="Nunito,sans-serif" font-size="14" fill="#ccd6f6" text-anchor="end" font-weight="700" opacity="0" style="transition-delay:.9s">+ 1.24</text>
+        <text class="nl-label" x="400" y="95" font-family="Nunito,sans-serif" font-size="15" fill="#ffd200" text-anchor="end" font-weight="900" opacity="0" style="transition-delay:.98s">= $3.54 ✓</text>
+      </svg>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Example from Lesson 1.3</div>
+      <p>Corey bought 4⅗ oz cashews and 3¹/₁₀ oz pistachios.<br>
+      LCD of 5 and 10 is <strong>10</strong>: convert 3/5 → 6/10.<br>
+      4⁶/₁₀ + 3¹/₁₀ = <span class="highlight">7⁷/₁₀ oz</span></p>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Lesson 1.3 Progress</span><span id="prog-l3-txt">0 / 5</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-l3" style="width:0%"></div></div>
+  </div>
+  <div class="section-title">Practice Questions</div>
+
+  <div class="q-card" id="q11">
+    <div class="q-text"><span class="q-num">1</span>
+    <div class="q-text-inner">To add 4⅗ + 3¹/₁₀, Corey needs the LCD = 10. What does 3/5 become when converted to tenths?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q11',false)">A) 3/10</button>
+      <button class="choice-btn" onclick="checkMC(this,'q11',false)">B) 5/10</button>
+      <button class="choice-btn" onclick="checkMC(this,'q11',true)">C) 6/10</button>
+      <button class="choice-btn" onclick="checkMC(this,'q11',false)">D) 8/10</button>
+    </div>
+    <div class="feedback" id="fb-q11"></div>
+  </div>
+
+  <div class="q-card" id="q12">
+    <div class="q-text"><span class="q-num">2</span>
+    <div class="q-text-inner">Corey bought <strong>4⅗ oz</strong> cashews and <strong>3¹/₁₀ oz</strong> pistachios. What is the total weight of nuts?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q12',false)">A) 7¹/₁₀ oz</button>
+      <button class="choice-btn" onclick="checkMC(this,'q12',true)">B) 7⁷/₁₀ oz</button>
+      <button class="choice-btn" onclick="checkMC(this,'q12',false)">C) 7⅘ oz</button>
+      <button class="choice-btn" onclick="checkMC(this,'q12',false)">D) 8⁷/₁₀ oz</button>
+    </div>
+    <div class="feedback" id="fb-q12"></div>
+  </div>
+
+  <div class="q-card" id="q13">
+    <div class="q-text"><span class="q-num">3</span>
+    <div class="q-text-inner">Solve: <strong>13.45 + 0.025 − 5.7 = ?</strong><br><small style="color:var(--text);font-weight:600">Align decimal points carefully</small></div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" step="0.001" id="inp-q13" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q13','7.775',false)">
+      <button class="check-btn" id="btn-q13" onclick="checkTyped('q13','7.775',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q13"></div>
+  </div>
+
+  <div class="q-card" id="q14">
+    <div class="q-text"><span class="q-num">4</span>
+    <div class="q-text-inner">Solve: <strong>−4.35 − 1.48 = ?</strong><br><small style="color:var(--text);font-weight:600">Include the negative sign</small></div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" step="0.01" id="inp-q14" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q14','-5.83',false)">
+      <button class="check-btn" id="btn-q14" onclick="checkTyped('q14','-5.83',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q14"></div>
+  </div>
+
+  <div class="q-card" id="q15">
+    <div class="q-text"><span class="q-num">5</span>
+    <div class="q-text-inner">Royal's phone has <strong>32 GB</strong> storage. Her apps use <strong>18.485 GB</strong> total. An OS upgrade needs <strong>9.1 GB</strong>. Does she have enough free space?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q15',true)">A) Yes — 13.515 GB free</button>
+      <button class="choice-btn" onclick="checkMC(this,'q15',false)">B) No — only 8 GB free</button>
+      <button class="choice-btn" onclick="checkMC(this,'q15',false)">C) No — she needs 5 more GB</button>
+      <button class="choice-btn" onclick="checkMC(this,'q15',false)">D) Yes — but barely, only 0.5 GB to spare</button>
+    </div>
+    <div class="feedback" id="fb-q15"></div>
+  </div>
+
+  <div class="celebration" id="cel-l3">
+    <div style="font-size:2.5rem">🎉</div>
+    <h3>Lesson 1.3 Done!</h3>
+    <p style="margin-top:6px">Fractions &amp; decimals — added and subtracted!</p>
+    <button class="check-btn" style="margin-top:18px" onclick="switchTab('l4')">Next: Adding Pos &amp; Neg Numbers →</button>
+  </div>
+</div>
+
+<!-- ═══ LESSON 1.4 ═══ -->
+<div class="tab-panel" id="panel-l4">
+  <div class="concept-box">
+    <div class="concept-label">Lesson 1.4 · Concept</div>
+    <h2>Adding Positive and Negative Numbers</h2>
+    <p>Use the <span class="highlight">number line</span> — direction and distance determine the sum:</p>
+    <p><span class="chip">pos + pos</span> → farther <strong>right</strong> (more positive)<br>
+    <span class="chip chip-pink">neg + neg</span> → farther <strong>left</strong> (more negative)<br>
+    <span class="chip chip-yellow">pos + neg</span> → the number with the <strong>larger absolute value wins</strong> the sign</p>
+    <div class="nl-wrap">
+      <svg id="nl4" width="540" height="130" viewBox="0 0 540 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arr4p" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#ff4d8d"/></marker>
+          <marker id="arr4t" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#00c9b1"/></marker>
+        </defs>
+        <!-- Axis -->
+        <line class="nl-axis" x1="20" y1="65" x2="520" y2="65" stroke="#4a5080" stroke-width="2" stroke-dasharray="520" stroke-dashoffset="520"/>
+        <polygon points="520,60 535,65 520,70" fill="#4a5080" opacity="0" class="nl-label" style="transition-delay:.9s"/>
+        <g font-family="Nunito,sans-serif" font-size="12" fill="#ccd6f6" text-anchor="middle">
+          <line x1="70" y1="58" x2="70" y2="72" stroke="#4a5080"/><text class="nl-label" x="70" y="84" style="transition-delay:.3s">−5</text>
+          <line x1="120" y1="58" x2="120" y2="72" stroke="#4a5080"/><text class="nl-label" x="120" y="84" style="transition-delay:.33s">−4</text>
+          <line x1="170" y1="58" x2="170" y2="72" stroke="#4a5080"/><text class="nl-label" x="170" y="84" style="transition-delay:.36s">−3</text>
+          <line x1="220" y1="58" x2="220" y2="72" stroke="#4a5080"/><text class="nl-label" x="220" y="84" style="transition-delay:.39s">−2</text>
+          <line x1="270" y1="58" x2="270" y2="72" stroke="#4a5080"/><text class="nl-label" x="270" y="84" style="transition-delay:.42s">−1</text>
+          <line x1="320" y1="54" x2="320" y2="76" stroke="#ffd200" stroke-width="2"/><text class="nl-label" x="320" y="90" fill="#ffd200" font-weight="800" style="transition-delay:.48s">0</text>
+          <line x1="370" y1="58" x2="370" y2="72" stroke="#4a5080"/><text class="nl-label" x="370" y="84" style="transition-delay:.51s">+1</text>
+          <line x1="420" y1="58" x2="420" y2="72" stroke="#4a5080"/><text class="nl-label" x="420" y="84" style="transition-delay:.54s">+2</text>
+          <line x1="470" y1="58" x2="470" y2="72" stroke="#4a5080"/><text class="nl-label" x="470" y="84" style="transition-delay:.57s">+3</text>
+        </g>
+        <!-- −2 + (−3) = −5: start at −2, arrow left 3 -->
+        <circle class="nl-dot" cx="220" cy="65" r="7" fill="#ff4d8d" style="transition-delay:.7s"/>
+        <path class="nl-label" d="M218 40 L72 40" fill="none" stroke="#ff4d8d" stroke-width="2.5" marker-end="url(#arr4p)" opacity="0" style="transition-delay:.9s;transition-property:opacity"/>
+        <text class="nl-label" x="145" y="32" font-family="Nunito,sans-serif" font-size="11" fill="#ff4d8d" text-anchor="middle" font-weight="800" opacity="0" style="transition-delay:1s">−2+(−3) = −5</text>
+        <circle class="nl-dot" cx="70" cy="65" r="7" fill="#ff4d8d" style="transition-delay:1s"/>
+        <!-- −3 + 2 = −1: start at −3, arrow right 2 -->
+        <circle class="nl-dot" cx="170" cy="65" r="6" fill="#00c9b1" style="transition-delay:1.1s"/>
+        <path class="nl-label" d="M172 48 L268 48" fill="none" stroke="#00c9b1" stroke-width="2.5" marker-end="url(#arr4t)" opacity="0" style="transition-delay:1.2s;transition-property:opacity"/>
+        <text class="nl-label" x="220" y="40" font-family="Nunito,sans-serif" font-size="11" fill="#00c9b1" text-anchor="middle" font-weight="800" opacity="0" style="transition-delay:1.3s">−3+2 = −1</text>
+        <circle class="nl-dot" cx="270" cy="65" r="6" fill="#00c9b1" style="transition-delay:1.3s"/>
+      </svg>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Example — Estimating</div>
+      <p>Is −4 a reasonable estimate for <strong>24.24 + (−27.8)</strong>?<br>
+      Round: 24 + (−28) = −4. Yes — the actual answer is −3.56, so −4 is close! ✓</p>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Lesson 1.4 Progress</span><span id="prog-l4-txt">0 / 5</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-l4" style="width:0%"></div></div>
+  </div>
+  <div class="section-title">Practice Questions</div>
+
+  <div class="q-card" id="q16">
+    <div class="q-text"><span class="q-num">1</span>
+    <div class="q-text-inner">When you add <strong>two negative numbers</strong>, the result is always:</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q16',false)">A) Positive</button>
+      <button class="choice-btn" onclick="checkMC(this,'q16',true)">B) Negative</button>
+      <button class="choice-btn" onclick="checkMC(this,'q16',false)">C) Zero</button>
+      <button class="choice-btn" onclick="checkMC(this,'q16',false)">D) It depends on the numbers</button>
+    </div>
+    <div class="feedback" id="fb-q16"></div>
+  </div>
+
+  <div class="q-card" id="q17">
+    <div class="q-text"><span class="q-num">2</span>
+    <div class="q-text-inner">What is <strong>−2 + (−3)</strong>?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q17',true)">A) −5</button>
+      <button class="choice-btn" onclick="checkMC(this,'q17',false)">B) +5</button>
+      <button class="choice-btn" onclick="checkMC(this,'q17',false)">C) −1</button>
+      <button class="choice-btn" onclick="checkMC(this,'q17',false)">D) +1</button>
+    </div>
+    <div class="feedback" id="fb-q17"></div>
+  </div>
+
+  <div class="q-card" id="q18">
+    <div class="q-text"><span class="q-num">3</span>
+    <div class="q-text-inner">What is <strong>−3 + 2</strong>?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q18',false)">A) +5</button>
+      <button class="choice-btn" onclick="checkMC(this,'q18',false)">B) −5</button>
+      <button class="choice-btn" onclick="checkMC(this,'q18',false)">C) +1</button>
+      <button class="choice-btn" onclick="checkMC(this,'q18',true)">D) −1</button>
+    </div>
+    <div class="feedback" id="fb-q18"></div>
+  </div>
+
+  <div class="q-card" id="q19">
+    <div class="q-text"><span class="q-num">4</span>
+    <div class="q-text-inner">Is an estimate of <strong>−4</strong> reasonable for the sum of <strong>24.24 + (−27.8)</strong>? <em>Hint: round each number first.</em></div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q19',true)">A) Yes — actual answer ≈ −3.56</button>
+      <button class="choice-btn" onclick="checkMC(this,'q19',false)">B) No — the sum is positive</button>
+      <button class="choice-btn" onclick="checkMC(this,'q19',false)">C) No — the sum is about −50</button>
+      <button class="choice-btn" onclick="checkMC(this,'q19',false)">D) No — it should be about +4</button>
+    </div>
+    <div class="feedback" id="fb-q19"></div>
+  </div>
+
+  <div class="q-card" id="q20">
+    <div class="q-text"><span class="q-num">5</span>
+    <div class="q-text-inner">Solve: <strong>−2.5 + (−0.5) = ?</strong></div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" step="0.1" id="inp-q20" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q20','-3',false)">
+      <button class="check-btn" id="btn-q20" onclick="checkTyped('q20','-3',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q20"></div>
+  </div>
+
+  <div class="celebration" id="cel-l4">
+    <div style="font-size:2.5rem">🎉</div>
+    <h3>Lesson 1.4 Done!</h3>
+    <p style="margin-top:6px">Adding positives &amp; negatives — you've got this!</p>
+    <button class="check-btn" style="margin-top:18px" onclick="switchTab('l5')">Next: Subtracting Pos &amp; Neg →</button>
+  </div>
+</div>
+
+<!-- ═══ LESSON 1.5 ═══ -->
+<div class="tab-panel" id="panel-l5">
+  <div class="concept-box">
+    <div class="concept-label">Lesson 1.5 · Concept</div>
+    <h2>Subtracting Positive and Negative Numbers</h2>
+    <p>Subtracting is the same as <span class="highlight">adding the additive inverse</span> of the second number:</p>
+    <p><span class="chip">a − b = a + (−b)</span> &nbsp; <span class="chip chip-pink">a − (−b) = a + b</span></p>
+    <div class="nl-wrap">
+      <svg id="nl5" width="480" height="100" viewBox="0 0 480 100" xmlns="http://www.w3.org/2000/svg">
+        <rect class="nl-label" x="8" y="8" width="222" height="86" rx="10" fill="rgba(0,201,177,.08)" stroke="#00c9b1" stroke-width="1.5" opacity="0" style="transition-delay:.3s"/>
+        <text class="nl-label" x="119" y="30" font-family="Space Grotesk,sans-serif" font-size="10" fill="#8890c0" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.38s">SUBTRACT POSITIVE</text>
+        <text class="nl-label" x="119" y="54" font-family="Nunito,sans-serif" font-size="14" fill="#ccd6f6" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.46s">4 − 7 = 4 + (−7)</text>
+        <text class="nl-label" x="119" y="82" font-family="Nunito,sans-serif" font-size="20" fill="#00c9b1" text-anchor="middle" font-weight="900" opacity="0" style="transition-delay:.56s">= −3</text>
+        <rect class="nl-label" x="250" y="8" width="222" height="86" rx="10" fill="rgba(255,77,141,.08)" stroke="#ff4d8d" stroke-width="1.5" opacity="0" style="transition-delay:.7s"/>
+        <text class="nl-label" x="361" y="30" font-family="Space Grotesk,sans-serif" font-size="10" fill="#8890c0" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.78s">SUBTRACT NEGATIVE</text>
+        <text class="nl-label" x="361" y="54" font-family="Nunito,sans-serif" font-size="14" fill="#ccd6f6" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.86s">4 − (−7) = 4 + 7</text>
+        <text class="nl-label" x="361" y="82" font-family="Nunito,sans-serif" font-size="20" fill="#ff4d8d" text-anchor="middle" font-weight="900" opacity="0" style="transition-delay:.96s">= +11</text>
+      </svg>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Key Insight</div>
+      <p>Subtracting a <strong>negative</strong> is the same as <span class="highlight">adding its absolute value</span>.<br>
+      4 − (−7.5) = 4 + 7.5 = <span class="highlight">11.5</span></p>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Common Mistake — Jamal's Error</div>
+      <p>Jamal wrote: <strong>10 − (−10) = 10 − 10 = 0</strong> ✗<br>
+      Correct: 10 − (−10) = 10 + 10 = <span class="highlight">20</span> ✓</p>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Lesson 1.5 Progress</span><span id="prog-l5-txt">0 / 5</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-l5" style="width:0%"></div></div>
+  </div>
+  <div class="section-title">Practice Questions</div>
+
+  <div class="q-card" id="q21">
+    <div class="q-text"><span class="q-num">1</span>
+    <div class="q-text-inner">Rewrite <strong>4 − 7</strong> as an addition problem:</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q21',true)">A) 4 + (−7)</button>
+      <button class="choice-btn" onclick="checkMC(this,'q21',false)">B) −4 + 7</button>
+      <button class="choice-btn" onclick="checkMC(this,'q21',false)">C) 4 + 7</button>
+      <button class="choice-btn" onclick="checkMC(this,'q21',false)">D) −4 + (−7)</button>
+    </div>
+    <div class="feedback" id="fb-q21"></div>
+  </div>
+
+  <div class="q-card" id="q22">
+    <div class="q-text"><span class="q-num">2</span>
+    <div class="q-text-inner">What is <strong>4 − (−7)</strong>?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q22',false)">A) −3</button>
+      <button class="choice-btn" onclick="checkMC(this,'q22',false)">B) 3</button>
+      <button class="choice-btn" onclick="checkMC(this,'q22',true)">C) 11</button>
+      <button class="choice-btn" onclick="checkMC(this,'q22',false)">D) −11</button>
+    </div>
+    <div class="feedback" id="fb-q22"></div>
+  </div>
+
+  <div class="q-card" id="q23">
+    <div class="q-text"><span class="q-num">3</span>
+    <div class="q-text-inner">Jamal wrote: <strong>10 − (−10) = 10 − 10 = 0</strong>. What is the <em>correct</em> answer?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q23',false)">A) 0</button>
+      <button class="choice-btn" onclick="checkMC(this,'q23',true)">B) 20</button>
+      <button class="choice-btn" onclick="checkMC(this,'q23',false)">C) −20</button>
+      <button class="choice-btn" onclick="checkMC(this,'q23',false)">D) 100</button>
+    </div>
+    <div class="feedback" id="fb-q23"></div>
+  </div>
+
+  <div class="q-card" id="q24">
+    <div class="q-text"><span class="q-num">4</span>
+    <div class="q-text-inner">Solve: <strong>4 − (−7.5) = ?</strong></div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" step="0.1" id="inp-q24" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q24','11.5',false)">
+      <button class="check-btn" id="btn-q24" onclick="checkTyped('q24','11.5',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q24"></div>
+  </div>
+
+  <div class="q-card" id="q25">
+    <div class="q-text"><span class="q-num">5</span>
+    <div class="q-text-inner">Solve: <strong>−17.56 − 13.43 = ?</strong></div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" step="0.01" id="inp-q25" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q25','-30.99',false)">
+      <button class="check-btn" id="btn-q25" onclick="checkTyped('q25','-30.99',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q25"></div>
+  </div>
+
+  <div class="celebration" id="cel-l5">
+    <div style="font-size:2.5rem">🎉</div>
+    <h3>Lesson 1.5 Done!</h3>
+    <p style="margin-top:6px">Subtracting negatives — flipped to addition like a pro!</p>
+    <button class="check-btn" style="margin-top:18px" onclick="switchTab('l6')">Next: Math Properties →</button>
+  </div>
+</div>
+
+<!-- ═══ LESSON 1.6 ═══ -->
+<div class="tab-panel" id="panel-l6">
+  <div class="concept-box">
+    <div class="concept-label">Lesson 1.6 · Concept</div>
+    <h2>Adding with Mathematical Properties</h2>
+    <p>Three properties let you <span class="highlight">rearrange and regroup</span> numbers to add rational numbers more efficiently:</p>
+    <div class="nl-wrap">
+      <svg id="nl6" width="480" height="120" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg">
+        <rect class="nl-label" x="8" y="6" width="142" height="108" rx="10" fill="rgba(0,201,177,.08)" stroke="#00c9b1" stroke-width="1.5" opacity="0" style="transition-delay:.3s"/>
+        <text class="nl-label" x="79" y="28" font-family="Space Grotesk,sans-serif" font-size="10" fill="#00c9b1" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.38s">COMMUTATIVE</text>
+        <text class="nl-label" x="79" y="54" font-family="Nunito,sans-serif" font-size="12" fill="#ccd6f6" text-anchor="middle" opacity="0" style="transition-delay:.46s">a + b = b + a</text>
+        <text class="nl-label" x="79" y="76" font-family="Nunito,sans-serif" font-size="11" fill="#8890c0" text-anchor="middle" opacity="0" style="transition-delay:.52s">Swap order freely</text>
+        <text class="nl-label" x="79" y="104" font-family="Nunito,sans-serif" font-size="11" fill="#ffd200" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.58s">3+(−1) = (−1)+3</text>
+        <rect class="nl-label" x="169" y="6" width="142" height="108" rx="10" fill="rgba(155,89,245,.08)" stroke="#9b59f5" stroke-width="1.5" opacity="0" style="transition-delay:.65s"/>
+        <text class="nl-label" x="240" y="28" font-family="Space Grotesk,sans-serif" font-size="10" fill="#9b59f5" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.73s">ASSOCIATIVE</text>
+        <text class="nl-label" x="240" y="50" font-family="Nunito,sans-serif" font-size="11" fill="#ccd6f6" text-anchor="middle" opacity="0" style="transition-delay:.8s">(a+b)+c = a+(b+c)</text>
+        <text class="nl-label" x="240" y="72" font-family="Nunito,sans-serif" font-size="11" fill="#8890c0" text-anchor="middle" opacity="0" style="transition-delay:.86s">Regroup brackets</text>
+        <text class="nl-label" x="240" y="94" font-family="Nunito,sans-serif" font-size="10" fill="#ffd200" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.92s">{−1+(−5)+(−7)+13}+11</text>
+        <text class="nl-label" x="240" y="112" font-family="Nunito,sans-serif" font-size="10" fill="#ffd200" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.96s">= 0 + 11 = 11</text>
+        <rect class="nl-label" x="330" y="6" width="142" height="108" rx="10" fill="rgba(255,77,141,.08)" stroke="#ff4d8d" stroke-width="1.5" opacity="0" style="transition-delay:1s"/>
+        <text class="nl-label" x="401" y="28" font-family="Space Grotesk,sans-serif" font-size="10" fill="#ff4d8d" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:1.08s">IDENTITY</text>
+        <text class="nl-label" x="401" y="54" font-family="Nunito,sans-serif" font-size="12" fill="#ccd6f6" text-anchor="middle" opacity="0" style="transition-delay:1.15s">a + 0 = a</text>
+        <text class="nl-label" x="401" y="76" font-family="Nunito,sans-serif" font-size="11" fill="#8890c0" text-anchor="middle" opacity="0" style="transition-delay:1.2s">Adding 0 changes</text>
+        <text class="nl-label" x="401" y="92" font-family="Nunito,sans-serif" font-size="11" fill="#8890c0" text-anchor="middle" opacity="0" style="transition-delay:1.24s">nothing</text>
+        <text class="nl-label" x="401" y="112" font-family="Nunito,sans-serif" font-size="11" fill="#ffd200" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:1.28s">−7 + 0 = −7</text>
+      </svg>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Strategy — Group Additive Inverses First</div>
+      <p>−1 + 11 + 13 + (−5) + (−7)<br>
+      → Regroup: {−1 + (−5) + (−7) + 13} + 11 &nbsp;→&nbsp; <strong>0</strong> + 11 = <span class="highlight">11</span></p>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Lesson 1.6 Progress</span><span id="prog-l6-txt">0 / 5</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-l6" style="width:0%"></div></div>
+  </div>
+  <div class="section-title">Practice Questions</div>
+
+  <div class="q-card" id="q26">
+    <div class="q-text"><span class="q-num">1</span>
+    <div class="q-text-inner">Which property allows you to rewrite <strong>(a + b) + c = a + (b + c)</strong>?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q26',false)">A) Commutative</button>
+      <button class="choice-btn" onclick="checkMC(this,'q26',false)">B) Identity</button>
+      <button class="choice-btn" onclick="checkMC(this,'q26',true)">C) Associative</button>
+      <button class="choice-btn" onclick="checkMC(this,'q26',false)">D) Distributive</button>
+    </div>
+    <div class="feedback" id="fb-q26"></div>
+  </div>
+
+  <div class="q-card" id="q27">
+    <div class="q-text"><span class="q-num">2</span>
+    <div class="q-text-inner">Which property lets you rewrite <strong>−1 + 11</strong> as <strong>11 + (−1)</strong>?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q27',false)">A) Associative</button>
+      <button class="choice-btn" onclick="checkMC(this,'q27',false)">B) Identity</button>
+      <button class="choice-btn" onclick="checkMC(this,'q27',true)">C) Commutative</button>
+      <button class="choice-btn" onclick="checkMC(this,'q27',false)">D) Additive Inverse</button>
+    </div>
+    <div class="feedback" id="fb-q27"></div>
+  </div>
+
+  <div class="q-card" id="q28">
+    <div class="q-text"><span class="q-num">3</span>
+    <div class="q-text-inner">Simplify using properties: <strong>4 + 18 + 7 + (−9) + 3 + (−9)</strong><br><small style="color:var(--text);font-weight:600">Hint: group the positives and negatives separately</small></div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" id="inp-q28" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q28','14',false)">
+      <button class="check-btn" id="btn-q28" onclick="checkTyped('q28','14',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q28"></div>
+  </div>
+
+  <div class="q-card" id="q29">
+    <div class="q-text"><span class="q-num">4</span>
+    <div class="q-text-inner">Simplify: <strong>−3.25 + 4.2 + 3.2 + (−2.1) + 0.05</strong></div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" step="0.01" id="inp-q29" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q29','2.1',false)">
+      <button class="check-btn" id="btn-q29" onclick="checkTyped('q29','2.1',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q29"></div>
+  </div>
+
+  <div class="q-card" id="q30">
+    <div class="q-text"><span class="q-num">5</span>
+    <div class="q-text-inner">In the expression <strong>−1 + 11 + 13 + (−5) + (−7)</strong>, when you group <strong>{−1 + (−5) + (−7) + 13}</strong> first, what does that group equal?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q30',false)">A) 13</button>
+      <button class="choice-btn" onclick="checkMC(this,'q30',false)">B) −13</button>
+      <button class="choice-btn" onclick="checkMC(this,'q30',true)">C) 0</button>
+      <button class="choice-btn" onclick="checkMC(this,'q30',false)">D) 11</button>
+    </div>
+    <div class="feedback" id="fb-q30"></div>
+  </div>
+
+  <div class="celebration" id="cel-l6">
+    <div style="font-size:2.5rem">🎉</div>
+    <h3>Lesson 1.6 Done!</h3>
+    <p style="margin-top:6px">Commutative, Associative, Identity — all three mastered!</p>
+    <button class="check-btn" style="margin-top:18px" onclick="switchTab('l7')">Next: Real World Problems →</button>
+  </div>
+</div>
+
+<!-- ═══ LESSON 1.7 ═══ -->
+<div class="tab-panel" id="panel-l7">
+  <div class="concept-box">
+    <div class="concept-label">Lesson 1.7 · Concept</div>
+    <h2>Rational Numbers in the Real World</h2>
+    <p>Apply everything from Chapter 1 — absolute value, additive inverses, adding/subtracting fractions and decimals, and mathematical properties — to solve <span class="highlight">real-world problems</span>.</p>
+    <div class="example-block">
+      <div class="ex-label">Strategy</div>
+      <p>① Read carefully — identify what is <strong>added</strong> vs <strong>subtracted</strong>.<br>
+      ② Use <strong>positive</strong> numbers for gains/increases and <strong>negative</strong> for losses/decreases.<br>
+      ③ Group additive inverses to simplify the arithmetic.</p>
+    </div>
+    <div class="example-block">
+      <div class="ex-label">Example — Bank Balance</div>
+      <p>Lynn starts with <strong>$64</strong>. After writing checks, her balance is <strong>−$13</strong>.<br>
+      Total checks = 64 − (−13) = 64 + 13 → wait, no: 64 − x = −13 → x = 64 + 13 = <span class="highlight">$77</span></p>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Lesson 1.7 Progress</span><span id="prog-l7-txt">0 / 5</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-l7" style="width:0%"></div></div>
+  </div>
+  <div class="section-title">Practice Questions</div>
+
+  <div class="q-card" id="q31">
+    <div class="q-text"><span class="q-num">1</span>
+    <div class="q-text-inner">Lynn's bank balance was <strong>$64</strong>. After three checks were written, it became <strong>−$13</strong>. What was the <em>total amount</em> of the checks?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q31',false)">A) $51</button>
+      <button class="choice-btn" onclick="checkMC(this,'q31',true)">B) $77</button>
+      <button class="choice-btn" onclick="checkMC(this,'q31',false)">C) $13</button>
+      <button class="choice-btn" onclick="checkMC(this,'q31',false)">D) $64</button>
+    </div>
+    <div class="feedback" id="fb-q31"></div>
+  </div>
+
+  <div class="q-card" id="q32">
+    <div class="q-text"><span class="q-num">2</span>
+    <div class="q-text-inner">Aaron tracks peaches at a farmers market (lbs): start <strong>4.1</strong>, picked <strong>19.8</strong>, sold <strong>21.6</strong>, picked <strong>17.7</strong>, sold <strong>18.1</strong>, picked <strong>22.4</strong>, sold <strong>12.9</strong>, picked <strong>15.3</strong>, sold <strong>23.9</strong>. How many pounds remain at end of week?</div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" step="0.1" id="inp-q32" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q32','2.8',false)">
+      <button class="check-btn" id="btn-q32" onclick="checkTyped('q32','2.8',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q32"></div>
+  </div>
+
+  <div class="q-card" id="q33">
+    <div class="q-text"><span class="q-num">3</span>
+    <div class="q-text-inner">Stock X changes over 5 days: <strong>+$6.75, −$12.50, +$21, −$9.20, +$4.35</strong>. On which day was the <em>biggest single change</em> (by absolute value)?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q33',false)">A) Day 1 (+$6.75)</button>
+      <button class="choice-btn" onclick="checkMC(this,'q33',false)">B) Day 2 (−$12.50)</button>
+      <button class="choice-btn" onclick="checkMC(this,'q33',true)">C) Day 3 (+$21)</button>
+      <button class="choice-btn" onclick="checkMC(this,'q33',false)">D) Day 4 (−$9.20)</button>
+    </div>
+    <div class="feedback" id="fb-q33"></div>
+  </div>
+
+  <div class="q-card" id="q34">
+    <div class="q-text"><span class="q-num">4</span>
+    <div class="q-text-inner">Mrs. McCoy's loan balance was <strong>$3,467</strong>. She made her regular payment of <strong>$291</strong>, an extra payment of <strong>$79</strong>, and was charged <strong>$23</strong> interest. What is her new balance?</div></div>
+    <div class="input-row">
+      <input class="ans-input" type="number" id="inp-q34" placeholder="Answer…" onkeydown="if(event.key==='Enter')checkTyped('q34','3120',false)">
+      <button class="check-btn" id="btn-q34" onclick="checkTyped('q34','3120',false)">Check ✓</button>
+    </div>
+    <div class="feedback" id="fb-q34"></div>
+  </div>
+
+  <div class="q-card" id="q35">
+    <div class="q-text"><span class="q-num">5</span>
+    <div class="q-text-inner">Raquel planted her herb garden: <strong>½</strong> chives, <strong>¼</strong> oregano, <strong>⅛</strong> parsley. What fraction of the garden is still <em>unplanted</em>?</div></div>
+    <div class="choices">
+      <button class="choice-btn" onclick="checkMC(this,'q35',false)">A) 7/8</button>
+      <button class="choice-btn" onclick="checkMC(this,'q35',false)">B) 3/8</button>
+      <button class="choice-btn" onclick="checkMC(this,'q35',false)">C) 1/4</button>
+      <button class="choice-btn" onclick="checkMC(this,'q35',true)">D) 1/8</button>
+    </div>
+    <div class="feedback" id="fb-q35"></div>
+  </div>
+
+  <div class="celebration" id="cel-l7">
     <div style="font-size:2.5rem">🏆</div>
-    <h3>Both Lessons Complete!</h3>
-    <p style="margin-top:6px">Absolute Value &amp; Additive Inverses — you've got this. 💪</p>
+    <h3>Chapter 1 Complete!</h3>
+    <p style="margin-top:6px">All 7 lessons of Adding &amp; Subtracting Rational Numbers — crushed! 🎊</p>
   </div>
 </div>
 
@@ -760,6 +1282,36 @@ const FEEDBACK = {
   q8:  { correct:'The additive inverse of +37.50 is −37.50. She took out $37.50 to hit zero.', wrong:'The additive inverse of 37.5 is −37.5. She removed exactly $37.50.' },
   q9:  { correct:'Leo earned $18+$9=$27. He spent $27. Since 27+(−27)=0, yes — perfect additive inverses!', wrong:'Leo earned $18+$9=$27 and spent $27. 27+(−27)=0, so YES, they are additive inverses.' },
   q10: { correct:'✅ Yes — exactly ONE number is its own additive inverse: <strong>0</strong>! Because 0+0=0. For any other n≠0, the inverse is −n (different from n). Zero is uniquely special!', wrong:'❌ Actually YES — one number can: <strong>0</strong>. Because 0+0=0. For any other number n, its inverse is −n (different from n), but zero is its own opposite!' },
+  // Lesson 1.3 — Adding & Subtracting Rational Numbers
+  q11: { correct:'3/5 × 2/2 = 6/10. Multiply numerator AND denominator by 2 to convert to tenths.', wrong:'To convert 3/5 to tenths, multiply both parts by 2: 3×2=6, 5×2=10 → 6/10.' },
+  q12: { correct:'4⅗ + 3¹/₁₀: convert 3/5 → 6/10, then 4⁶/₁₀ + 3¹/₁₀ = 7⁷/₁₀ oz.', wrong:'Use LCD=10: 4⅗ = 4⁶/₁₀. Then 4⁶/₁₀ + 3¹/₁₀ = 7⁷/₁₀ oz.' },
+  q13: { correct:'13.45 + 0.025 = 13.475, then 13.475 − 5.7 = 7.775. Align decimal points!', wrong:'Align the decimals carefully: 13.450 + 0.025 = 13.475; 13.475 − 5.700 = 7.775.' },
+  q14: { correct:'Both are negative, so add their absolute values and keep the negative sign: −4.35 − 1.48 = −5.83.', wrong:'Both negative means you add the absolute values: 4.35 + 1.48 = 5.83, then keep the − sign → −5.83.' },
+  q15: { correct:'32 − 18.485 = 13.515 GB free. The update needs 9.1 GB, and 13.515 > 9.1, so yes!', wrong:'Free space = 32 − 18.485 = 13.515 GB. Since 13.515 GB > 9.1 GB needed, there IS enough room.' },
+  // Lesson 1.4 — Adding Positive and Negative Numbers
+  q16: { correct:'Negative + negative always gives a more negative result — you move further left on the number line.', wrong:'Think of the number line: neg+neg means you go left twice → always more negative.' },
+  q17: { correct:'−2 + (−3) = −5. Both negative → add absolute values (2+3=5), keep the negative sign.', wrong:'Both negative: add the sizes (2+3=5) and keep the − sign → −5.' },
+  q18: { correct:'−3 + 2 = −1. The negative has larger absolute value (3>2), so the answer is negative: −(3−2) = −1.', wrong:'Different signs: |−3|=3 > |2|=2, so the negative wins. Result is −(3−2) = −1.' },
+  q19: { correct:'Round: 24.24 ≈ 24 and −27.8 ≈ −28. 24 + (−28) = −4. Actual = −3.56 ≈ −4 ✓', wrong:'Round to nearest whole: 24 + (−28) = −4. The actual answer is −3.56, which is close to −4 — so yes, reasonable!' },
+  q20: { correct:'−2.5 + (−0.5) = −3. Add the sizes (2.5+0.5=3) and keep the negative sign.', wrong:'Both negative: 2.5 + 0.5 = 3, keep the − → −3.' },
+  // Lesson 1.5 — Subtracting Positive and Negative Numbers
+  q21: { correct:'a − b = a + (−b). So 4 − 7 = 4 + (−7). Subtracting a positive is the same as adding its negative.', wrong:'Subtracting is adding the opposite: 4 − 7 becomes 4 + (−7).' },
+  q22: { correct:'4 − (−7) = 4 + 7 = 11. Subtracting a negative flips to adding: a − (−b) = a + b.', wrong:'Subtract a negative = add its positive: 4 − (−7) = 4 + 7 = 11.' },
+  q23: { correct:'10 − (−10) = 10 + 10 = 20. Jamal forgot to flip the sign of the second number!', wrong:'Correct: 10 − (−10) = 10 + 10 = 20 (subtracting negative = adding positive). NOT 10−10=0.' },
+  q24: { correct:'4 − (−7.5) = 4 + 7.5 = 11.5. Subtracting a negative becomes addition.', wrong:'Flip the sign: 4 − (−7.5) = 4 + 7.5 = 11.5.' },
+  q25: { correct:'−17.56 − 13.43: both negatives add up → −(17.56 + 13.43) = −30.99.', wrong:'Subtracting a positive from a negative: −17.56 − 13.43 = −(17.56+13.43) = −30.99.' },
+  // Lesson 1.6 — Adding with Mathematical Properties
+  q26: { correct:'Associative Property: (a+b)+c = a+(b+c). It lets you regroup terms in brackets without changing the sum.', wrong:'Regrouping brackets = Associative Property. Commutative swaps order; Identity adds 0.' },
+  q27: { correct:'Commutative Property: a+b = b+a. You can swap the order of any two addends.', wrong:'Swapping order = Commutative Property. −1+11 = 11+(−1) — same sum, different order.' },
+  q28: { correct:'Group positives: 4+18+7+3=32. Group negatives: −9+(−9)=−18. 32+(−18)=14.', wrong:'Try grouping: (4+18+7+3) + (−9−9) = 32 + (−18) = 14.' },
+  q29: { correct:'Positives: 4.2+3.2+0.05=7.45. Negatives: −3.25+(−2.1)=−5.35. 7.45+(−5.35)=2.1.', wrong:'Group positives (4.2+3.2+0.05=7.45) and negatives (−3.25−2.1=−5.35): 7.45−5.35=2.1.' },
+  q30: { correct:'−1+(−5)+(−7)+13 = (−13)+13 = 0. The negatives (−1,−5,−7) sum to −13, which cancels with +13!', wrong:'Add −1+(−5)+(−7) = −13. Then −13+13 = 0. These are additive inverses!' },
+  // Lesson 1.7 — Rational Numbers in the Real World
+  q31: { correct:'Start $64, end −$13. Difference = 64 − (−13) = 64 + 13 = $77 total checks written.', wrong:'64 + 13 = 77. Going from +64 to −13 means $77 was subtracted (checks written).' },
+  q32: { correct:'4.1+19.8−21.6+17.7−18.1+22.4−12.9+15.3−23.9 = 2.8 lbs remaining.', wrong:'Add picks, subtract sales: 4.1+19.8−21.6+17.7−18.1+22.4−12.9+15.3−23.9 = 2.8 lbs.' },
+  q33: { correct:'Day 3: +$21. Largest absolute value (21 > 12.50 > 9.20 > 6.75 > 4.35). Absolute value determines size.', wrong:'Compare absolute values: Day 1=6.75, Day 2=12.50, Day 3=21, Day 4=9.20, Day 5=4.35. Day 3 wins!' },
+  q34: { correct:'3467 − 291 − 79 + 23 = 3467 − 370 + 23 = 3097 + 23 = 3120.', wrong:'3467 − 291 = 3176; 3176 − 79 = 3097; 3097 + 23 = 3120.' },
+  q35: { correct:'Planted: ½+¼+⅛ = 4/8+2/8+1/8 = 7/8. Unplanted = 1 − 7/8 = 1/8.', wrong:'Total planted = 4/8+2/8+1/8 = 7/8. Unplanted = 8/8 − 7/8 = 1/8.' },
 };
 
 const Q_META = {
@@ -767,6 +1319,16 @@ const Q_META = {
   q3:{type:'typed',correct:'15',isText:false},q4:{type:'mc',correct:'True'},q5:{type:'mc',correct:'C) |−4.1|'},
   q6:{type:'mc',correct:'B) +6.5'},q7:{type:'mc',correct:'C) 0 ft'},
   q8:{type:'typed',correct:'37.5',isText:false},q9:{type:'typed',correct:'yes',isText:true},q10:{type:'mc',correct:'Yes'},
+  q11:{type:'mc',correct:'C) 6/10'},q12:{type:'mc',correct:'B) 7⁷/₁₀ oz'},
+  q13:{type:'typed',correct:'7.775',isText:false},q14:{type:'typed',correct:'-5.83',isText:false},q15:{type:'mc',correct:'A) Yes — 13.515 GB free'},
+  q16:{type:'mc',correct:'B) Negative'},q17:{type:'mc',correct:'A) −5'},
+  q18:{type:'mc',correct:'D) −1'},q19:{type:'mc',correct:'A) Yes — actual answer ≈ −3.56'},q20:{type:'typed',correct:'-3',isText:false},
+  q21:{type:'mc',correct:'A) 4 + (−7)'},q22:{type:'mc',correct:'C) 11'},
+  q23:{type:'mc',correct:'B) 20'},q24:{type:'typed',correct:'11.5',isText:false},q25:{type:'typed',correct:'-30.99',isText:false},
+  q26:{type:'mc',correct:'C) Associative'},q27:{type:'mc',correct:'C) Commutative'},
+  q28:{type:'typed',correct:'14',isText:false},q29:{type:'typed',correct:'2.1',isText:false},q30:{type:'mc',correct:'C) 0'},
+  q31:{type:'mc',correct:'B) $77'},q32:{type:'typed',correct:'2.8',isText:false},
+  q33:{type:'mc',correct:'C) Day 3 (+$21)'},q34:{type:'typed',correct:'3120',isText:false},q35:{type:'mc',correct:'D) 1/8'},
 };
 
 // ── STORAGE ──
@@ -781,7 +1343,7 @@ function loadState() {
       return s;
     }
   } catch(e){}
-  return { score:0, answered:new Set(), l1Done:0, l2Done:0, activeTab:'l1',
+  return { score:0, answered:new Set(), l1Done:0, l2Done:0, l3Done:0, l4Done:0, l5Done:0, l6Done:0, l7Done:0, activeTab:'l1',
            lastWasWrong:false,
            profile:null, questions:{} };
 }
@@ -926,7 +1488,7 @@ function updateScore() {
 }
 
 function updateProgress(lesson) {
-  const done = lesson==='l1' ? state.l1Done : state.l2Done;
+  const done = state[lesson+'Done'] || 0;
   const pct = Math.round((done/5)*100);
   document.getElementById('prog-'+lesson).style.width = pct+'%';
   document.getElementById('prog-'+lesson+'-txt').textContent = done+' / 5';
@@ -939,14 +1501,23 @@ function updateProgress(lesson) {
   }
 }
 
-function getLesson(qid) { return parseInt(qid.replace('q',''))<=5?'l1':'l2'; }
+function getLesson(qid) {
+  const n = parseInt(qid.replace('q',''));
+  if (n<=5) return 'l1';
+  if (n<=10) return 'l2';
+  if (n<=15) return 'l3';
+  if (n<=20) return 'l4';
+  if (n<=25) return 'l5';
+  if (n<=30) return 'l6';
+  return 'l7';
+}
 
 function registerAnswer(qid, wasCorrect) {
   if (state.answered.has(qid)) return;
   state.answered.add(qid);
   if (wasCorrect) state.score++;
   const lesson = getLesson(qid);
-  if (lesson==='l1') state.l1Done++; else state.l2Done++;
+  state[lesson+'Done']++;
   state.lastWasWrong = !wasCorrect;
   updateScore();
   updateProgress(lesson);
@@ -1040,7 +1611,7 @@ function animateNL(svgId) {
 // ── TAB SWITCH ──
 let currentTab = null;
 function switchTab(id, animate=true) {
-  const tabs = ['l1','l2'];
+  const tabs = ['l1','l2','l3','l4','l5','l6','l7'];
   const prev = currentTab;
   currentTab = id;
   state.activeTab = id;
@@ -1051,6 +1622,7 @@ function switchTab(id, animate=true) {
 
   tabs.forEach(t => {
     const panel = document.getElementById('panel-'+t);
+    if (!panel) return;
     if (t===id) {
       panel.style.display='block';
       if (animate && prev && prev!==id) {
@@ -1059,9 +1631,8 @@ function switchTab(id, animate=true) {
         setTimeout(()=>panel.classList.remove(dir), 450);
       }
       panel.classList.add('active');
-      // animate number lines
-      const nlIds = id==='l1' ? ['nl1','nl-q1'] : ['nl2'];
-      setTimeout(()=>nlIds.forEach(animateNL), 100);
+      const nlMap = {l1:['nl1','nl-q1'],l2:['nl2'],l3:['nl3'],l4:['nl4'],l5:['nl5'],l6:['nl6'],l7:['nl7']};
+      setTimeout(()=>(nlMap[id]||[]).forEach(animateNL), 100);
     } else {
       panel.classList.remove('active');
       panel.style.display='none';
@@ -1092,24 +1663,18 @@ function restoreState() {
       const btn=document.querySelector('#'+qid+' .reveal-btn'); if(btn) btn.disabled=true;
     }
   }
-  if (state.l1Done===5) {
-    document.getElementById('cel-l1').classList.add('show');
-    document.getElementById('prog-l1').style.width='100%';
-    document.getElementById('prog-l1-txt').textContent='5 / 5';
-  } else {
-    const pct=Math.round((state.l1Done/5)*100);
-    document.getElementById('prog-l1').style.width=pct+'%';
-    document.getElementById('prog-l1-txt').textContent=state.l1Done+' / 5';
-  }
-  if (state.l2Done===5) {
-    document.getElementById('cel-l2').classList.add('show');
-    document.getElementById('prog-l2').style.width='100%';
-    document.getElementById('prog-l2-txt').textContent='5 / 5';
-  } else {
-    const pct=Math.round((state.l2Done/5)*100);
-    document.getElementById('prog-l2').style.width=pct+'%';
-    document.getElementById('prog-l2-txt').textContent=state.l2Done+' / 5';
-  }
+  ['l1','l2','l3','l4','l5','l6','l7'].forEach(lesson => {
+    const done = state[lesson+'Done'] || 0;
+    if (done===5) {
+      document.getElementById('cel-'+lesson).classList.add('show');
+      document.getElementById('prog-'+lesson).style.width='100%';
+      document.getElementById('prog-'+lesson+'-txt').textContent='5 / 5';
+    } else {
+      const pct=Math.round((done/5)*100);
+      document.getElementById('prog-'+lesson).style.width=pct+'%';
+      document.getElementById('prog-'+lesson+'-txt').textContent=done+' / 5';
+    }
+  });
   updateScore();
 }
 
