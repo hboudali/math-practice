@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- -->
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spectrum Math · Chapter 1 · Grade 7</title>
@@ -202,7 +202,7 @@ header{
 
 /* ANIMATED NUMBER LINES */
 .nl-wrap{background:var(--card);border-radius:16px;padding:20px;margin:14px 0;overflow-x:auto}
-.nl-wrap svg{display:block;margin:0 auto}
+.nl-wrap svg{display:block;width:100%;height:auto}
 .nl-axis{stroke-dasharray:600;stroke-dashoffset:600;transition:stroke-dashoffset 0.9s ease}
 .nl-axis.drawn{stroke-dashoffset:0}
 .nl-dot{opacity:0;transition:opacity 0.3s,transform 0.4s}
@@ -527,7 +527,7 @@ header{
     <p>We write it with bars: <span class="chip">|−5| = 5</span> <span class="chip">|+5| = 5</span></p>
     <p><strong>Opposite numbers</strong> have the <span class="highlight">same absolute value</span>: <span class="chip chip-pink">|−5| = |+5| = 5</span></p>
     <div class="nl-wrap">
-      <svg id="nl1" width="540" height="110" viewBox="0 0 540 110" xmlns="http://www.w3.org/2000/svg">
+      <svg id="nl1" width="100%" viewBox="0 0 540 110" xmlns="http://www.w3.org/2000/svg">
         <line class="nl-axis" x1="20" y1="60" x2="510" y2="60" stroke="#4a5080" stroke-width="2" stroke-dasharray="520" stroke-dashoffset="520"/>
         <polygon points="510,55 525,60 510,65" fill="#4a5080" opacity="0" class="nl-label" style="transition-delay:.9s"/>
         <g font-family="Nunito,sans-serif" font-size="13" fill="#ccd6f6" text-anchor="middle">
@@ -575,7 +575,7 @@ header{
     <div class="q-text"><span class="q-num">1</span>
     <div class="q-text-inner">Look at the number line. Which statement is <strong>TRUE</strong>?
       <div class="nl-wrap" style="margin-top:12px">
-        <svg id="nl-q1" width="420" height="78" viewBox="0 0 420 78" xmlns="http://www.w3.org/2000/svg">
+        <svg id="nl-q1" width="100%" viewBox="0 0 420 78" xmlns="http://www.w3.org/2000/svg">
           <line class="nl-axis" x1="10" y1="44" x2="405" y2="44" stroke="#4a5080" stroke-width="2" stroke-dasharray="420" stroke-dashoffset="420"/>
           <polygon points="405,39 420,44 405,49" fill="#4a5080" opacity="0" class="nl-label" style="transition-delay:.85s"/>
           <g font-family="Nunito,sans-serif" font-size="11.5" fill="#ccd6f6" text-anchor="middle">
@@ -668,7 +668,7 @@ header{
     <p>Two numbers are <span class="highlight">additive inverses</span> if they add up to <span class="highlight-yellow">zero</span>. Every number's additive inverse is its <strong>opposite</strong>.</p>
     <p><span class="chip">a + (−a) = 0</span> &nbsp; <span class="chip chip-pink">7 + (−7) = 0</span> &nbsp; <span class="chip chip-yellow">−3.5 + 3.5 = 0</span></p>
     <div class="nl-wrap">
-      <svg id="nl2" width="540" height="130" viewBox="0 0 540 130" xmlns="http://www.w3.org/2000/svg">
+      <svg id="nl2" width="100%" viewBox="0 0 540 130" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arrowPink" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#ff4d8d"/></marker>
           <marker id="arrowTeal" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#00c9b1"/></marker>
@@ -791,7 +791,7 @@ header{
     <p>① <strong>Fractions</strong> — find the <span class="highlight">LCD</span>, convert both fractions, then add/subtract numerators.<br>
     ② <strong>Decimals</strong> — <span class="highlight">align the decimal points</span> so place values line up, then add/subtract normally.</p>
     <div class="nl-wrap">
-      <svg id="nl3" width="480" height="110" viewBox="0 0 480 110" xmlns="http://www.w3.org/2000/svg">
+      <svg id="nl3" width="100%" viewBox="0 0 480 110" xmlns="http://www.w3.org/2000/svg">
         <!-- Fractions box -->
         <rect class="nl-label" x="8" y="6" width="224" height="98" rx="10" fill="rgba(0,201,177,.08)" stroke="#00c9b1" stroke-width="1.5" opacity="0" style="transition-delay:.3s"/>
         <text class="nl-label" x="120" y="28" font-family="Space Grotesk,sans-serif" font-size="11" fill="#00c9b1" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.38s">FRACTIONS — USE LCD</text>
@@ -894,7 +894,7 @@ header{
     <span class="chip chip-pink">neg + neg</span> → farther <strong>left</strong> (more negative)<br>
     <span class="chip chip-yellow">pos + neg</span> → the number with the <strong>larger absolute value wins</strong> the sign</p>
     <div class="nl-wrap">
-      <svg id="nl4" width="540" height="130" viewBox="0 0 540 130" xmlns="http://www.w3.org/2000/svg">
+      <svg id="nl4" width="100%" viewBox="0 0 540 130" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arr4p" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#ff4d8d"/></marker>
           <marker id="arr4t" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#00c9b1"/></marker>
@@ -1012,7 +1012,7 @@ header{
     <p>Subtracting is the same as <span class="highlight">adding the additive inverse</span> of the second number:</p>
     <p><span class="chip">a − b = a + (−b)</span> &nbsp; <span class="chip chip-pink">a − (−b) = a + b</span></p>
     <div class="nl-wrap">
-      <svg id="nl5" width="480" height="100" viewBox="0 0 480 100" xmlns="http://www.w3.org/2000/svg">
+      <svg id="nl5" width="100%" viewBox="0 0 480 100" xmlns="http://www.w3.org/2000/svg">
         <rect class="nl-label" x="8" y="8" width="222" height="86" rx="10" fill="rgba(0,201,177,.08)" stroke="#00c9b1" stroke-width="1.5" opacity="0" style="transition-delay:.3s"/>
         <text class="nl-label" x="119" y="30" font-family="Space Grotesk,sans-serif" font-size="10" fill="#8890c0" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.38s">SUBTRACT POSITIVE</text>
         <text class="nl-label" x="119" y="54" font-family="Nunito,sans-serif" font-size="14" fill="#ccd6f6" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.46s">4 − 7 = 4 + (−7)</text>
@@ -1112,7 +1112,7 @@ header{
     <h2>Adding with Mathematical Properties</h2>
     <p>Three properties let you <span class="highlight">rearrange and regroup</span> numbers to add rational numbers more efficiently:</p>
     <div class="nl-wrap">
-      <svg id="nl6" width="480" height="120" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg">
+      <svg id="nl6" width="100%" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg">
         <rect class="nl-label" x="8" y="6" width="142" height="108" rx="10" fill="rgba(0,201,177,.08)" stroke="#00c9b1" stroke-width="1.5" opacity="0" style="transition-delay:.3s"/>
         <text class="nl-label" x="79" y="28" font-family="Space Grotesk,sans-serif" font-size="10" fill="#00c9b1" text-anchor="middle" font-weight="700" opacity="0" style="transition-delay:.38s">COMMUTATIVE</text>
         <text class="nl-label" x="79" y="54" font-family="Nunito,sans-serif" font-size="12" fill="#ccd6f6" text-anchor="middle" opacity="0" style="transition-delay:.46s">a + b = b + a</text>
