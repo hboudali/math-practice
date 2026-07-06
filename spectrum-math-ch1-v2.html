@@ -29,17 +29,19 @@ body{background:var(--navy);font-family:'Nunito',sans-serif;color:var(--white);m
 #onboarding{
   position:fixed;inset:0;z-index:1000;
   background:var(--navy);
-  display:flex;align-items:center;justify-content:center;
+  display:flex;align-items:flex-start;justify-content:center;
   padding:24px;
+  overflow-y:auto;
   transition:opacity 0.6s,transform 0.6s;
 }
 #onboarding.hide{opacity:0;transform:scale(0.95);pointer-events:none}
 .ob-card{
   background:var(--card);border-radius:28px;
   padding:40px 44px;max-width:520px;width:100%;
-  border:2px solid var(--card2);
-  box-shadow:0 0 60px rgba(0,201,177,0.12);
+  border:2px solid rgba(0,201,177,0.35);
+  box-shadow:0 0 60px rgba(0,201,177,0.18),0 8px 40px rgba(0,0,0,0.5);
   position:relative;overflow:hidden;
+  margin:auto 0;
 }
 .ob-card::before{
   content:'';position:absolute;inset:0;
@@ -156,7 +158,7 @@ header{
 
 /* TABS */
 .tabs{
-  display:flex;justify-content:center;gap:10px;
+  display:flex;justify-content:flex-start;gap:10px;
   padding:24px 24px 0;position:relative;z-index:10;
 }
 .tab-btn{
@@ -169,7 +171,7 @@ header{
 .tab-btn.active{background:var(--teal);color:var(--navy);border-color:var(--teal);box-shadow:0 0 24px rgba(0,201,177,0.4)}
 
 /* CONTENT */
-.content{max-width:860px;margin:0 auto;padding:28px 24px 80px;position:relative;z-index:10;overflow:hidden}
+.content{max-width:860px;margin:0 auto;padding:28px 24px 80px;position:relative;z-index:10}
 .panels-wrapper{position:relative}
 .tab-panel{display:none;animation:none}
 .tab-panel.active{display:block}
