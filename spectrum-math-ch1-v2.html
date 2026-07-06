@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +71,7 @@ body{background:var(--navy);font-family:'Nunito',sans-serif;color:var(--white);m
 }
 .avatar-opt:hover{border-color:var(--teal);transform:scale(1.08)}
 .avatar-opt.selected{border-color:var(--yellow);background:rgba(255,210,0,0.08);box-shadow:0 0 16px rgba(255,210,0,0.25)}
-.avatar-opt svg{display:block}
+.avatar-opt img{display:block;border-radius:8px}
 .ob-start-btn{
   width:100%;background:var(--teal);color:var(--navy);
   border:none;border-radius:14px;padding:16px;
@@ -96,8 +95,36 @@ header{
 }
 .header-left{display:flex;align-items:center;gap:14px}
 .header-avatar{width:44px;height:44px;border-radius:12px;overflow:hidden;flex-shrink:0;
-  border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;background:var(--card2)}
-.header-avatar svg{display:block}
+  border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;background:var(--card2);
+  cursor:pointer;transition:border-color 0.2s,transform 0.2s}
+.header-avatar:hover{border-color:var(--yellow);transform:scale(1.1)}
+.header-avatar img{display:block;border-radius:8px}
+/* avatar change modal */
+#avatar-modal{
+  display:none;position:fixed;inset:0;z-index:9000;
+  background:rgba(5,7,30,0.82);backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;
+}
+#avatar-modal.open{display:flex}
+.avatar-modal-box{
+  background:var(--card);border-radius:24px;padding:32px;
+  width:min(520px,94vw);border:1.5px solid var(--card2);
+  box-shadow:0 24px 64px rgba(0,0,0,0.55);
+}
+.avatar-modal-box h3{
+  font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:800;
+  margin:0 0 20px;color:var(--teal);letter-spacing:0.5px;
+}
+.avatar-modal-actions{display:flex;gap:10px;margin-top:24px}
+.avatar-modal-actions button{
+  flex:1;padding:13px;border-radius:12px;border:none;
+  font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:0.9rem;
+  cursor:pointer;transition:all 0.2s;
+}
+.btn-save-av{background:var(--teal);color:var(--navy)}
+.btn-save-av:hover{filter:brightness(1.1)}
+.btn-cancel-av{background:var(--card2);color:#8890c0}
+.btn-cancel-av:hover{background:#2a2f5a}
 .header-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem}
 .header-name span{color:var(--teal)}
 .header-right{display:flex;align-items:center;gap:12px}
@@ -297,6 +324,95 @@ header{
 }
 .reset-btn:hover{border-color:var(--wrong);color:var(--wrong)}
 
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+/* Tabs: horizontal scroll on all sizes so they never wrap to 2 rows */
+.tabs{
+  flex-wrap:nowrap;overflow-x:auto;
+  padding-left:16px;padding-right:16px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tab-btn{white-space:nowrap;flex-shrink:0}
+
+@media(max-width:768px){
+  /* header */
+  header{padding:14px 18px;gap:10px}
+  .header-name{font-size:0.9rem}
+
+  /* onboarding card */
+  .ob-card{padding:28px 20px}
+  .ob-card h1{font-size:1.5rem}
+
+  /* hero */
+  .hero{padding:20px 16px 10px}
+
+  /* tabs */
+  .tabs{padding:16px 12px 0;gap:6px}
+  .tab-btn{padding:9px 16px;font-size:0.82rem}
+
+  /* content */
+  .content{padding:20px 14px 60px}
+
+  /* concept box */
+  .concept-box{padding:18px 18px}
+  .concept-box h2{font-size:1.2rem}
+
+  /* q-cards */
+  .q-card{padding:16px 16px}
+
+  /* input */
+  .ans-input{width:100%}
+  .input-row{flex-direction:column;align-items:stretch}
+  .check-btn{width:100%}
+  .reveal-btn{width:100%}
+
+  /* avatar grid: 4 cols on tablet */
+  .avatar-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+@media(max-width:480px){
+  /* header */
+  header{padding:10px 14px}
+  .header-avatar{width:38px;height:38px}
+  .score-badge{padding:6px 12px;font-size:0.82rem}
+
+  /* onboarding card */
+  .ob-card{padding:22px 16px;border-radius:20px}
+  .ob-card h1{font-size:1.3rem}
+  .ob-sub{font-size:0.88rem}
+
+  /* hero */
+  .hero{padding:16px 14px 8px}
+  .hero p{font-size:0.88rem}
+
+  /* tabs */
+  .tabs{gap:5px}
+  .tab-btn{padding:8px 13px;font-size:0.78rem;border-radius:10px}
+
+  /* concept box */
+  .concept-box{padding:14px 14px}
+  .concept-box::after{display:none}
+
+  /* q-card */
+  .q-card{padding:14px 12px;border-radius:14px}
+  .q-text{font-size:0.92rem}
+  .choice-btn{font-size:0.88rem;padding:10px 12px}
+
+  /* avatar grid: 4 cols still fits at 480px */
+  .avatar-grid{grid-template-columns:repeat(4,1fr);gap:6px}
+
+  /* avatar modal */
+  .avatar-modal-box{padding:20px 14px;border-radius:18px}
+
+  /* celebration */
+  .celebration{padding:24px 14px}
+  .celebration h3{font-size:1.4rem}
+}
+
 </style>
 </head>
 <body>
@@ -372,7 +488,7 @@ header{
 
 <header>
   <div class="header-left">
-    <div class="header-avatar" id="header-avatar"></div>
+    <div class="header-avatar" id="header-avatar" onclick="openAvatarModal()" title="Change avatar"></div>
     <div class="header-name">Hey, <span id="header-name">Student</span>!</div>
   </div>
   <div class="header-right">
@@ -1194,81 +1310,17 @@ header{
 ══════════════════════════════════════ -->
 <script>
 // ── AVATAR DEFINITIONS ──
-// ── ANIMAL AVATAR BUILDER ──
-function buildAnimalSVG(a, size) {
-  const S = size, h = S/2;
-  let g = '';
-  g += `<rect width="${S}" height="${S}" fill="${a.bg}"/>`;
-  if (a.back) g += a.back(S, h);
-  g += `<circle cx="${h}" cy="${h}" r="${S*0.38}" fill="${a.face}"/>`;
-  const ey=S*0.42, er=S*0.075, elx=S*0.37, erx=S*0.63;
-  g += `<circle cx="${elx}" cy="${ey}" r="${er}" fill="${a.eyeC}"/>`;
-  g += `<circle cx="${erx}" cy="${ey}" r="${er}" fill="${a.eyeC}"/>`;
-  g += `<circle cx="${elx+er*.4}" cy="${ey-er*.4}" r="${er*.38}" fill="#fff" opacity=".88"/>`;
-  g += `<circle cx="${erx+er*.4}" cy="${ey-er*.4}" r="${er*.38}" fill="#fff" opacity=".88"/>`;
-  const ny=S*0.585;
-  if (a.beak) {
-    g += `<polygon points="${h},${ny-S*.03} ${h-S*.07},${ny+S*.08} ${h+S*.07},${ny+S*.08}" fill="${a.nose}"/>`;
-  } else {
-    g += `<ellipse cx="${h}" cy="${ny}" rx="${S*.068}" ry="${S*.052}" fill="${a.nose}"/>`;
-  }
-  if (!a.noMouth) g += `<path d="M${h-S*.1},${ny+S*.11} Q${h},${ny+S*.2} ${h+S*.1},${ny+S*.11}" fill="none" stroke="${a.nose}" stroke-width="${S*.03}" stroke-linecap="round"/>`;
-  if (a.cheeks!==false) {
-    g += `<circle cx="${S*.28}" cy="${S*.63}" r="${S*.075}" fill="#ff9999" opacity=".4"/>`;
-    g += `<circle cx="${S*.72}" cy="${S*.63}" r="${S*.075}" fill="#ff9999" opacity=".4"/>`;
-  }
-  if (a.front) g += a.front(S, h);
-  return g;
-}
-
-const ANIMAL_DEFS = [
-  { id:0, label:'Cat', bg:'#1a1d4a', face:'#f5a623', eyeC:'#0f1035', nose:'#e8724a',
-    back:(S,h)=>`<polygon points="${S*.27},${S*.33} ${S*.38},${S*.06} ${S*.49},${S*.33}" fill="#f5a623"/><polygon points="${S*.29},${S*.32} ${S*.38},${S*.1} ${S*.47},${S*.32}" fill="#ffb3a0"/><polygon points="${S*.51},${S*.33} ${S*.62},${S*.06} ${S*.73},${S*.33}" fill="#f5a623"/><polygon points="${S*.53},${S*.32} ${S*.62},${S*.1} ${S*.71},${S*.32}" fill="#ffb3a0"/>`,
-    front:(S,h)=>`<line x1="${S*.08}" y1="${S*.57}" x2="${S*.38}" y2="${S*.61}" stroke="#0f1035" stroke-width="${S*.018}" opacity=".45"/><line x1="${S*.08}" y1="${S*.63}" x2="${S*.38}" y2="${S*.63}" stroke="#0f1035" stroke-width="${S*.018}" opacity=".45"/><line x1="${S*.62}" y1="${S*.61}" x2="${S*.92}" y2="${S*.57}" stroke="#0f1035" stroke-width="${S*.018}" opacity=".45"/><line x1="${S*.62}" y1="${S*.63}" x2="${S*.92}" y2="${S*.63}" stroke="#0f1035" stroke-width="${S*.018}" opacity=".45"/>`
-  },
-  { id:2, label:'Fox', bg:'#2a1400', face:'#e8622a', eyeC:'#0f1035', nose:'#0f1035',
-    back:(S,h)=>`<polygon points="${S*.28},${S*.36} ${S*.38},${S*.06} ${S*.48},${S*.36}" fill="#e8622a"/><polygon points="${S*.3},${S*.35} ${S*.38},${S*.1} ${S*.46},${S*.35}" fill="#ffd2b0"/><polygon points="${S*.52},${S*.36} ${S*.62},${S*.06} ${S*.72},${S*.36}" fill="#e8622a"/><polygon points="${S*.54},${S*.35} ${S*.62},${S*.1} ${S*.7},${S*.35}" fill="#ffd2b0"/>`,
-    front:(S,h)=>`<ellipse cx="${h}" cy="${S*.72}" rx="${S*.17}" ry="${S*.1}" fill="#fff8f5"/><line x1="${S*.07}" y1="${S*.57}" x2="${S*.37}" y2="${S*.61}" stroke="#0f1035" stroke-width="${S*.018}" opacity=".45"/><line x1="${S*.07}" y1="${S*.63}" x2="${S*.37}" y2="${S*.63}" stroke="#0f1035" stroke-width="${S*.018}" opacity=".45"/><line x1="${S*.63}" y1="${S*.61}" x2="${S*.93}" y2="${S*.57}" stroke="#0f1035" stroke-width="${S*.018}" opacity=".45"/><line x1="${S*.63}" y1="${S*.63}" x2="${S*.93}" y2="${S*.63}" stroke="#0f1035" stroke-width="${S*.018}" opacity=".45"/>`
-  },
-  { id:3, label:'Bunny', bg:'#2a0a2a', face:'#e8b4d8', eyeC:'#9b59f5', nose:'#ff4d8d',
-    back:(S,h)=>`<ellipse cx="${S*.35}" cy="${S*.22}" rx="${S*.09}" ry="${S*.2}" fill="#e8b4d8"/><ellipse cx="${S*.35}" cy="${S*.22}" rx="${S*.06}" ry="${S*.16}" fill="#ffb3d4"/><ellipse cx="${S*.65}" cy="${S*.22}" rx="${S*.09}" ry="${S*.2}" fill="#e8b4d8"/><ellipse cx="${S*.65}" cy="${S*.22}" rx="${S*.06}" ry="${S*.16}" fill="#ffb3d4"/>`
-  },
-  { id:4, label:'Bear', bg:'#1a0a00', face:'#8b5a2b', eyeC:'#0f1035', nose:'#0f1035',
-    back:(S,h)=>`<circle cx="${S*.22}" cy="${S*.35}" r="${S*.14}" fill="#8b5a2b"/><circle cx="${S*.78}" cy="${S*.35}" r="${S*.14}" fill="#8b5a2b"/>`,
-    front:(S,h)=>`<ellipse cx="${h}" cy="${S*.72}" rx="${S*.14}" ry="${S*.09}" fill="#6b3a0b"/>`
-  },
-  { id:5, label:'Panda', bg:'#0a0a0a', face:'#f0f0f0', eyeC:'#1a1a1a', nose:'#1a1a1a', cheeks:false,
-    back:(S,h)=>`<circle cx="${S*.26}" cy="${S*.34}" r="${S*.14}" fill="#1a1a1a"/><circle cx="${S*.74}" cy="${S*.34}" r="${S*.14}" fill="#1a1a1a"/><circle cx="${S*.22}" cy="${S*.34}" r="${S*.07}" fill="#f0f0f0"/><circle cx="${S*.78}" cy="${S*.34}" r="${S*.07}" fill="#f0f0f0"/>`,
-    front:(S,h)=>`<ellipse cx="${S*.36}" cy="${S*.63}" rx="${S*.09}" ry="${S*.07}" fill="#2a2a2a"/><ellipse cx="${S*.64}" cy="${S*.63}" rx="${S*.09}" ry="${S*.07}" fill="#2a2a2a"/>`
-  },
-  { id:6, label:'Owl', bg:'#0f1035', face:'#9b59f5', eyeC:'#ffd200', nose:'#ffd200', beak:true, cheeks:false,
-    back:(S,h)=>`<polygon points="${S*.34},${S*.3} ${S*.4},${S*.06} ${S*.46},${S*.3}" fill="#7a3fd4"/><polygon points="${S*.54},${S*.3} ${S*.6},${S*.06} ${S*.66},${S*.3}" fill="#7a3fd4"/>`,
-    front:(S,h)=>`<ellipse cx="${S*.36}" cy="${S*.57}" rx="${S*.12}" ry="${S*.14}" fill="#7a3fd4" opacity=".65"/><ellipse cx="${S*.64}" cy="${S*.57}" rx="${S*.12}" ry="${S*.14}" fill="#7a3fd4" opacity=".65"/>`,
-    noMouth:true
-  },
-  { id:8, label:'Tiger', bg:'#2a1000', face:'#e8801a', eyeC:'#0f1035', nose:'#a0400a',
-    back:(S,h)=>`<polygon points="${S*.28},${S*.34} ${S*.38},${S*.06} ${S*.48},${S*.34}" fill="#e8801a"/><polygon points="${S*.52},${S*.34} ${S*.62},${S*.06} ${S*.72},${S*.34}" fill="#e8801a"/>`,
-    front:(S,h)=>`<path d="M${S*.35},${S*.37} Q${S*.4},${S*.28} ${S*.45},${S*.37}" fill="#c05a00"/><path d="M${S*.55},${S*.37} Q${S*.6},${S*.28} ${S*.65},${S*.37}" fill="#c05a00"/><path d="M${S*.46},${S*.35} Q${S*.5},${S*.24} ${S*.54},${S*.35}" fill="#c05a00"/><line x1="${S*.07}" y1="${S*.59}" x2="${S*.36}" y2="${S*.63}" stroke="#0f1035" stroke-width="${S*.02}" opacity=".5"/><line x1="${S*.07}" y1="${S*.66}" x2="${S*.36}" y2="${S*.66}" stroke="#0f1035" stroke-width="${S*.02}" opacity=".5"/><line x1="${S*.64}" y1="${S*.63}" x2="${S*.93}" y2="${S*.59}" stroke="#0f1035" stroke-width="${S*.02}" opacity=".5"/><line x1="${S*.64}" y1="${S*.66}" x2="${S*.93}" y2="${S*.66}" stroke="#0f1035" stroke-width="${S*.02}" opacity=".5"/>`
-  },
-  { id:9, label:'Penguin', bg:'#0a1020', face:'#f5f0e8', eyeC:'#0f1035', nose:'#e8a020', beak:true, cheeks:false,
-    back:(S,h)=>`<ellipse cx="${h}" cy="${S*.55}" rx="${S*.38}" ry="${S*.44}" fill="#0f1035"/><ellipse cx="${h}" cy="${S*.6}" rx="${S*.23}" ry="${S*.33}" fill="#f5f0e8"/><ellipse cx="${h}" cy="${S*.28}" rx="${S*.2}" ry="${S*.17}" fill="#0f1035"/>`,
-    noMouth:true
-  },
-  { id:10, label:'Koala', bg:'#1a1a22', face:'#9090a8', eyeC:'#0f1035', nose:'#2a2a3a',
-    back:(S,h)=>`<circle cx="${S*.16}" cy="${S*.44}" r="${S*.19}" fill="#9090a8"/><circle cx="${S*.84}" cy="${S*.44}" r="${S*.19}" fill="#9090a8"/><circle cx="${S*.16}" cy="${S*.44}" r="${S*.12}" fill="#b8b8cc"/><circle cx="${S*.84}" cy="${S*.44}" r="${S*.12}" fill="#b8b8cc"/>`,
-    front:(S,h)=>`<ellipse cx="${h}" cy="${S*.72}" rx="${S*.14}" ry="${S*.09}" fill="#6a6a80"/>`
-  },
-  { id:11, label:'Lion', bg:'#2a1a00', face:'#e8a820', eyeC:'#0f1035', nose:'#8a3000',
-    back:(S,h)=>{
-      let m='';
-      for(let i=0;i<12;i++){const a=(i/12)*Math.PI*2,r=S*.38,cx=h+Math.cos(a)*r,cy=h+Math.sin(a)*r;m+=`<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${S*.11}" fill="#c07010"/>`;}
-      return m+`<circle cx="${S*.25}" cy="${S*.26}" r="${S*.12}" fill="#e8a820"/><circle cx="${S*.75}" cy="${S*.26}" r="${S*.12}" fill="#e8a820"/>`;
-    }
-  },
+const AVATARS = [
+  { id:'Luna'    }, { id:'Zara'    }, { id:'Nova'    }, { id:'Mila'   }, { id:'Ivy'    },
+  { id:'Stella'  }, { id:'Cleo'   }, { id:'Ruby'    }, { id:'Jade'   }, { id:'Aria'   },
+  { id:'Felix'   }, { id:'Dash'   }, { id:'Axel'    }, { id:'Rocco'  }, { id:'Leo'    },
+  { id:'Finn'    }, { id:'Jasper' }, { id:'Cruz'    }, { id:'Koda'   }, { id:'Remy'   },
 ];
 
-const AVATARS = ANIMAL_DEFS;
-
+function avatarSVG(id, size=48) {
+  const seed = id || 'Felix';
+  return `<img src="https://api.dicebear.com/9.x/croodles/svg?seed=${seed}" width="${size}" height="${size}" style="display:block;border-radius:8px" loading="lazy">`;
+}
 
 // ── FEEDBACK ──
 const FEEDBACK = {
@@ -1415,12 +1467,6 @@ function loop() {
   animFrame = particles.length ? requestAnimationFrame(loop) : null;
 }
 
-// ── AVATAR HELPERS ──
-function avatarSVG(id, size=48) {
-  const a = AVATARS[id] || AVATARS[0];
-  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">${buildAnimalSVG(a, size)}</svg>`;
-}
-
 // ── ONBOARDING ──
 let selectedAvatar = null;
 
@@ -1432,7 +1478,7 @@ function buildAvatarGrid() {
     div.className = 'avatar-opt';
     div.style.flexDirection = 'column';
     div.style.gap = '4px';
-    div.innerHTML = avatarSVG(a.id, 52) + `<span style="font-size:0.6rem;color:#8890c0;font-weight:700;letter-spacing:0.5px">${a.label}</span>`;
+    div.innerHTML = avatarSVG(a.id, 52);
     div.title = a.label;
     div.onclick = () => {
       document.querySelectorAll('.avatar-opt').forEach(el=>el.classList.remove('selected'));
@@ -1692,6 +1738,53 @@ if (state.profile) {
   document.getElementById('onboarding').style.display = 'none';
   launchApp();
 }
+
+// ── AVATAR CHANGE MODAL ──
+let _pendingAvatar = null;
+
+function openAvatarModal() {
+  _pendingAvatar = state.profile.avatarId;
+  const modal = document.getElementById('avatar-modal');
+  const grid  = document.getElementById('avatar-modal-grid');
+  grid.innerHTML = '';
+  AVATARS.forEach(a => {
+    const div = document.createElement('div');
+    div.className = 'avatar-opt' + (a.id === _pendingAvatar ? ' selected' : '');
+    div.innerHTML = avatarSVG(a.id, 52);
+    div.onclick = () => {
+      grid.querySelectorAll('.avatar-opt').forEach(el => el.classList.remove('selected'));
+      div.classList.add('selected');
+      _pendingAvatar = a.id;
+    };
+    grid.appendChild(div);
+  });
+  modal.classList.add('open');
+}
+
+function saveAvatarChange() {
+  if (_pendingAvatar) {
+    state.profile.avatarId = _pendingAvatar;
+    saveState();
+    document.getElementById('header-avatar').innerHTML = avatarSVG(_pendingAvatar, 36);
+  }
+  document.getElementById('avatar-modal').classList.remove('open');
+}
+
+function closeAvatarModal() {
+  document.getElementById('avatar-modal').classList.remove('open');
+}
 </script>
+
+<!-- Avatar change modal -->
+<div id="avatar-modal">
+  <div class="avatar-modal-box">
+    <h3>Choose your avatar</h3>
+    <div class="avatar-grid" id="avatar-modal-grid"></div>
+    <div class="avatar-modal-actions">
+      <button class="btn-cancel-av" onclick="closeAvatarModal()">Cancel</button>
+      <button class="btn-save-av" onclick="saveAvatarChange()">Save</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
